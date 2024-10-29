@@ -4,6 +4,7 @@ import { FaUserGroup } from "react-icons/fa6";
 import { TbMessage } from "react-icons/tb";
 import { Link, useLocation } from 'react-router-dom';
 import foter from '../assets/imgaes/fotor-20240918234722.png'
+import logo from '../assets/imgaes/logo/logo-modified.png'
 
 
 const Bar = () => {
@@ -15,7 +16,7 @@ const Bar = () => {
   return (
     <>
      
-<section className='shadow-md bg-[#4e4a4a]'>
+<section className='shadow-md bg-[#fff]'>
 <div className="container">
 <div className="navbar ">
    <div className="navbar-start nav">
@@ -37,29 +38,33 @@ const Bar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+        <Link to={'/'} className='w-10 h-10 bg-black text-white flex items-center justify-center rounded-full text-xl hb'>
+       <FaUserGroup />
+       </Link>
+
+      <Link to={'/message'}  className=' my-2 w-10 h-10 bg-black text-white flex items-center justify-center rounded-full text-xl'>
+      <TbMessage /></Link>
       </ul>
     </div>
     <div className='d-flex text-white font-serif align-items-center'>
-      <img className='w-12 ' src={foter} alt="" />
+      <img className='w-12 ' src={logo} alt="" />
       <div className='ps-1'>
-        <p>Md Shahadat Alam</p>
+        <p className='text-black'>ChatApp</p>
       </div>
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <Link to={'/'} className='w-10 h-10 bg-white flex items-center justify-center rounded-full text-xl hb'>
+      <Link to={'/'} className= "w-10 h-10 bg-black text-white flex items-center justify-center rounded-full text-xl hb">
        <FaUserGroup />
        </Link>
 
-      <Link to={'/message'}  className='w-10 h-10 bg-white flex items-center justify-center rounded-full text-xl'>
+      <Link to={'/message'}  className='  mx-2 w-10 h-10 bg-black text-white flex items-center justify-center rounded-full text-xl'>
       <TbMessage /></Link>
     </ul>
   </div>
   <div>
-    <button className='w-20 bg-slate-600 h-8 text-white rounded-md font-serif'>Log out</button>
+    <button className='w-20 bg-black h-8 text-white rounded-md font-serif'>Log out</button>
   </div>
 </div>
 </div>

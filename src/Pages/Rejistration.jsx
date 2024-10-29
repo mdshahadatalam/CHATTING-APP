@@ -8,7 +8,7 @@ const Rejistration = () => {
   return (
     <>
     <ToastContainer/>
-    <section className='bg-[#504949] Animation '>
+    <section className='rgistraBg Animation '>
       <div className="container">
         <div className="row ps-2 justify-center text-center items-center w-full h-screen">
          
