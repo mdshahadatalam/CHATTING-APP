@@ -15,14 +15,35 @@
 }
 
 .loginBg{
-    background-image: url(../src/assets/imgaes/bg/bg3.jpg);
+    background-image: url(../src/assets/imgaes/bg/bg2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .rgistraBg{
-    background-image: url(../src/assets/imgaes/bg/bg2.jpg);
+    background-image: url(../src/assets/imgaes/bg/bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+/* home section  */
+/* .homeSec{
+    background-image: url(./assets//imgaes//bg/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+} */
+
+
+.camreIcon{
+    top: 31px;
+    right: 97px;
+}
+
+@media (max-width: 991.98px) {
+    .sendingSec{
+        width: 80%;
+    }
 }
