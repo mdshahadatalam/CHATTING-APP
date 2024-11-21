@@ -10,6 +10,7 @@ import LoggedInUserRoute from './PrivateRoute/LogedInUser';
 import NotLoggedInUserRoute from './PrivateRoute/NotLoggedInUserRoute';
 import { RootLayout } from './RootLayout';
 import { Message } from './Pages/Message';
+import "cropperjs/dist/cropper.css";
 
 function App() {
  

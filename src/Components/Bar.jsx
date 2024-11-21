@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import { Link } from 'react-router-dom'
 import { FaUserGroup } from "react-icons/fa6";
 import { TbMessage } from "react-icons/tb";
@@ -9,9 +9,13 @@ import { getAuth, signOut } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { loggedOutUser } from '../Features/Slice/LoginSlice';
 import { IoCameraOutline } from "react-icons/io5";
+import Moderm from './Moderm';
+import { createPortal } from 'react-dom';
 
 
 const Bar = () => {
+
+  const [show,setShow] = useState(false)
    
   const auth = getAuth();
   const location = useLocation();
@@ -64,13 +68,17 @@ const Bar = () => {
       <TbMessage /></Link>
       </ul>
     </div>
+
     <div className='d-flex text-white font-serif align-items-center position-relative'>
       <img className='w-12 ' src={foter} alt="" />
-      <span className='text-white position-absolute camreIcon w-6 h-6 bg-black d-flex justify-center align-items-center rounded-full'> <IoCameraOutline /></span>
+      <span onClick={()=>{setShow(true)}} className='text-white position-absolute camreIcon w-6 h-6 bg-black d-flex justify-center align-items-center rounded-full cursor-pointer'> <IoCameraOutline /></span>
+
       <div className='ps-1'>
         <p className='text-black'>Md Shahadat </p>
       </div>
+
     </div>
+    
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -88,7 +96,11 @@ const Bar = () => {
 </div>
 </div>
 </section>
-  
+
+
+{
+  show && createPortal(<Moderm setShow={setShow} />, document.body )
+}
 
     </>
   )
